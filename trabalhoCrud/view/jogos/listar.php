@@ -58,7 +58,7 @@ include_once(__DIR__ . "/../include/header.php");
                     </a>
                 </td>
                  <td>
-                    <a href="" onclick="excluirJogo(<?= $jogos->getId() ?>)">
+                    <a href="javascript:void(0)" onclick="excluirJogo(<?= $jogos->getId() ?>)">
                         <img src="../../img/btn_excluir.png" alt="">
                     </a>
                 </td>
@@ -68,7 +68,7 @@ include_once(__DIR__ . "/../include/header.php");
 
 
 </table>
-
+<script src="js/jogos.js"></script>
 <?php
 //Incluir o footer
 include_once(__DIR__ . "/../include/footer.php");
