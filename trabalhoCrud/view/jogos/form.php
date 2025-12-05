@@ -24,7 +24,7 @@ include_once(__DIR__ . "/../include/header.php");
 
             <div>
                 <label for="txtTitulo" class="form-label">Titulo:</label>
-                <input type="text" id="txtTitulo" name="titulo" class="form-control"
+                <input onclick="verificaTitulo()" type="text" id="txtTitulo" name="titulo" class="form-control"
                     placeholder="Informe o titulo"
                     value="<?= $jogo ? $jogo->getTitulo() : '' ?>">
             </div>

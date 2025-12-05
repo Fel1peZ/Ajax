@@ -66,8 +66,31 @@ function excluirJogo(id){
     xhttp.send(dados);
         }
         
-        
-    
 
+}
 
+function verificaTitulo(){
+
+    const titulo = document.querySelector("#txtTitulo").value.trim();
+    if(titulo){
+        const xhttp = new XMLHttpRequest();
+        const dados = new FormData();
+        dados.append("titulo", titulo);
+
+        xhttp.open("POST","/trabalhoCrud/api/jogos_verifica_titulo.php");
+
+        xhttp.onload = function(){
+            const erros = xhttp.responseText.trim();
+
+            if (erros !== "") {
+                divErro.innerHTML = erros;
+                divErro.style.display = "block";
+            } else {
+                divErro.style.display = "none";
+                divErro.innerHTML = "";
+            }
+        };
+
+        xhttp.send(dados);
+    }
 }
