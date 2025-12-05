@@ -29,6 +29,9 @@ include_once(__DIR__ . "/../include/header.php");
             <th>Console</th>
             <th>Diretor</th>
             <th>Img</th>
+            <th>Alterar</th>
+            <th>Excluir</th>
+            <th>ExcluirAjax</th>
         </tr>
 
         <!-- Dados -->
@@ -51,6 +54,11 @@ include_once(__DIR__ . "/../include/header.php");
                 </td>
                 <td>
                     <a href="excluir.php?id=<?= $jogos->getId() ?>" onclick="confirm('Confirma a exclusão')">
+                        <img src="../../img/btn_excluir.png" alt="">
+                    </a>
+                </td>
+                 <td>
+                    <a href="" onclick="excluirJogo(<?= $jogos->getId() ?>)">
                         <img src="../../img/btn_excluir.png" alt="">
                     </a>
                 </td>

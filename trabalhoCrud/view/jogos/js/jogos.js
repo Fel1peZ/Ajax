@@ -39,3 +39,25 @@ function salvarJogo(){
     }
     xhttp.send(dados);
 }
+
+function excluirJogo(id){
+    if(id){
+        if(confirm("Confirma a exclusão?")){
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("POST","/trabalhoCrud/api/jogos_excluir.php");
+
+        }
+        xhttp.onload = function(){
+        
+        const erros = xhttp.responseText;
+        if(erros){
+           
+            divErro.innerHTML = erros;
+            divErro.style.display = "block";
+        }
+    }
+        xhttp.send("id",id);
+    }
+
+
+}
